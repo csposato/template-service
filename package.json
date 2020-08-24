@@ -1,0 +1,44 @@
+{
+    "name": "template-service",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "flow": "flow",
+        "lint": "eslint",
+        "prettier": "npx prettier --write '**/*.js' '**/*.json' '**/*.md' '**/*.yml'",
+        "prettier-check": "prettier --check '**/*.js' '**/*.json' '**/*.md' '**/*.yml'",
+        "start": "node app.js",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/csposato/template-service.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/csposato/template-service/issues"
+    },
+    "homepage": "https://github.com/csposato/template-service#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "node-fetch": "^2.6.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.4",
+        "@babel/preset-flow": "^7.10.4",
+        "eslint": "^7.7.0",
+        "flow-bin": "^0.131.0",
+        "jest": "^26.4.1",
+        "prettier": "2.0.5"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "coveragePathIgnorePatterns": [
+            "/node_modules/"
+        ]
+    }
+}
