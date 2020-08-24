@@ -6,13 +6,13 @@ Pasos para la generarción de un nuevo servicio con NodeJS.
 
 Ingresando al Gitlab corporativo y dentro del grupo MOVAR_APP seleccionar `New project`, ingresar un nombre y descripción acorde al servicio a crear y marcar `Initialize repository with a README`
 
-![New project](../template-service/doc/images/new_project.png)
+![New project](./doc/images/new_project.png)
 
 ## Clonar el repo
 
 Una vez creado el repositorio en Gitlab clonarlo en el equipo  
 
-`git clone https://devops.movistar.com.ar/gitlab/movar_app/NUEVO_SERVICIO.git`
+`git clone https://somosagiles.movistar.com.ar/gitlab/movar_app/NUEVO_SERVICIO.git`
 
 Donde NUEVO_SERVICIO es el servicio creado recientemente.
 
@@ -21,6 +21,8 @@ Donde NUEVO_SERVICIO es el servicio creado recientemente.
 Iniciar el proyecto dentro del directorio raíz para generar el archivo `package.json`
 
 `npm init`
+
+![package.json](./doc/images/package_json.png)
 
 ## Agregar script para iniciar el servicio
 
@@ -43,22 +45,16 @@ Dentro del archivo `package.json` agregar el script de __start__
 En la raiz del proyecto, crear un archivo y nombrarlo `.gitignore` con el siguiente contenido.
 
 ```
-[ignore]
-.*/__tests__/.*
+# JetBrains IDE files
+.idea
+# Logs
+logs
+*.log
+npm-debug.log*
+.env
 
-[untyped]
-.*/node_modules/*
-.*/packages/.*
-
-[include]
-
-[libs]
-
-[lints]
-
-[options]
-
-[strict]
+# Dependency directories
+node_modules/
 ```
 
 ## Instalar dependencias
@@ -196,7 +192,7 @@ Instalación `npm install eslint --save-devp`
 
 Setup para generar el archivo de configuración `npx eslint --init`
 
-![](../template-service/doc/images/eslint_setup.png)
+![](./doc/images/eslint_setup.png)
 
 Dentro del archivo `package.json` agregar los script de __lint__
 ```
